@@ -1,0 +1,15 @@
+$color: green;
+body {
+    color:$color;
+    font-size:16;
+    background-color: green;
+    height: 100px;
+    display: flex;
+    background-clip: polygon();
+    background-image: linear-gradient(to right, #fff, #888);
+    display: grid;
+    font-family: 'Courier New', Courier, monospace;
+    column-gap: 2;
+    backface-visibility: hidden;
+    padding: 0;
+}

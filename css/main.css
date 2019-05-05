@@ -1,0 +1,29 @@
+/*
+COLORS
+
+Primary: #eb2f64
+Primary light: #FF3366
+Primary dark: #BA265D
+
+Grey light 1: #faf9f9
+Grey light 2: #f4f2f2
+Grey light 3: #f0eeee
+Grey light 4: #ccc
+
+Grey dark 1: #333
+Grey dark 2: #777
+Grey dark 3: #999
+
+*/
+body {
+  color: green;
+  font-size: 16;
+  background-color: green;
+  height: 100px;
+  display: flex;
+  background-clip: polygon();
+  background-image: linear-gradient(to right, #fff, #888);
+  display: grid;
+  font-family: 'Courier New', Courier, monospace;
+  column-gap: 2;
+  backface-visibility: hidden; }
