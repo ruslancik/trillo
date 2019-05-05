@@ -26,4 +26,5 @@ body {
   display: grid;
   font-family: 'Courier New', Courier, monospace;
   column-gap: 2;
-  backface-visibility: hidden; }
+  backface-visibility: visible;
+  padding: 0; }

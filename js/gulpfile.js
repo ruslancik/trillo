@@ -3,7 +3,8 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
-const watchSass = require('gulp-watch-sass');
+const watch = require('gulp-watch');
+
 
 
 ///////
@@ -24,10 +25,6 @@ gulp.task('sass', function () {
 });
 
 
-// SASS -watch
-
-
-
 ///////////////////
 // PREFİX task
 ///////////////////
@@ -39,4 +36,15 @@ gulp.task('prefix', () =>
             cascade: false
         }))
         .pipe(gulp.dest('../css/prefix'))
-);
+    );
+
+// Watch
+
+gulp.task('watch', function(){
+  gulp.watch('../sass/*.scss', gulp.series('sass'));
+  gulp.watch('../css/*.css', gulp.series('prefix'));
+});
+
+
+
+gulp.task('develop', gulp.series('sass', 'prefix', 'watch'));

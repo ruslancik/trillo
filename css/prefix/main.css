@@ -33,5 +33,6 @@ body {
   -webkit-column-gap: 2;
   -moz-column-gap: 2;
   column-gap: 2;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden; }
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+  padding: 0; }
