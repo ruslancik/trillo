@@ -1,21 +1,100 @@
 ////// LOGO
 .logo {
-
+    height: 4rem;
+    margin-left: 2rem;
 }
 
 ////// SEARCH
 .search {
+    flex: 0 0 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     &__input {
+        font-family: inherit;
+        color:inherit;
+        background-color: $grey-light-2;
+        border: none;
+        outline: none;
+        padding: 0.8rem 2rem;
+        border-radius: 50px;
+        width: 95%;
+        margin-right: -3.5rem;
+        transition: all .3s;
+        &:focus {
+            width: 100%;
+            background-color: $grey-light-3;
+        }
 
+        &::-webkit-input-placeholder {
+            font-weight: 100;
+            color: $grey-dark-3;
+        }
+    }
+
+    &__input:focus + &__button {
+       background-color: $grey-light-3;
     }
 
     &__button{
-
-    }
-
-    &__button i {
+        outline: none;
+        border: none;
+        background-color: $grey-light-2;
+        font-size: 2rem;
+        transition: all .2s;
+        color: $grey-dark-2;
         
+        &:focus {
+            transform: translateY(2px);
+
+        }
     }
+
+
 }
 
 ////// USER NAV
+
+.user-nav {
+    background-color: greenyellow;
+
+    &__icon {
+
+        & i {
+            
+        }
+    }
+
+    &__box {
+
+        & i {
+
+        }
+    }
+
+    &__notifi {
+
+    }
+
+    &__user {
+
+        &-photo {
+            height: 4rem;
+            width: auto;
+            border-radius: 50%;
+        }
+
+        &-name {
+
+        }
+    }
+
+
+
+
+
+
+
+
+
+}
