@@ -6,6 +6,8 @@
         
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
         <link rel="stylesheet" href="css/prefix/main.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+         crossorigin="anonymous">
         <link rel="shortcut icon" type="image/png" href="img/favicon.png">
         
         <title>trillo &mdash; Your all-in-one booking app</title>
@@ -13,11 +15,31 @@
     <body>
         <div class="container">
             <div class="header">
-                Header
+                <img src="img/logo.png" alt="trillo logo" class="logo">
+
+                <form action="#" class="search">
+                    <input type="search" class="searh__input" placeholder="Search anything..">
+                    <button class="search__button">
+                    <i class="fas fa-search"></i>
+                    </button>
+                </form>
             </div>
             <div class="content">
                 <nav class="sidebar">   
-                    Navigation  
+                    <div class="user-nav">
+                        <div class="user-nav__icon">
+                            <i class="fas fa-bookmark"></i>
+                            <span class="user-nav__notifi">7</span>
+                        </div>
+                        <div class="user-nav__box">
+                            <i class="fas fa-envelope"></i>
+                            <span class="user-nav__notifi">13</span>
+                        </div>
+                        <div class="user-nav__user">
+                            <img src="img/ruslan.jpg" alt="Ruslan Bairamovi photo" class="user-nav__user-photo">
+                            <span class="user-nav__user-name">Ruslan</span>
+                        </div>
+                    </div>
                 </nav>
                 <main class="hotel-view">
                     hotel view
