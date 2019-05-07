@@ -57,11 +57,48 @@ body {
       transform: translateY(2px); }
 
 .user-nav {
-  background-color: greenyellow; }
-  .user-nav__user-photo {
-    height: 4rem;
-    width: auto;
-    border-radius: 50%; }
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .user-nav > * {
+    padding: 0 1.5rem;
+    cursor: pointer; }
+  .user-nav > *:hover {
+    background-color: #f4f2f2; }
+  .user-nav__icon {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 2rem;
+    position: relative; }
+  .user-nav__notifi {
+    margin: 0 auto;
+    display: inline-block;
+    height: 1.7rem;
+    width: 1.7rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #eb2f64;
+    color: #fff;
+    border-radius: 100px;
+    position: absolute;
+    top: 1.15rem;
+    right: 0.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .user-nav__user {
+    height: 100%;
+    display: flex;
+    align-items: center; }
+    .user-nav__user-photo {
+      height: 4rem;
+      width: auto;
+      border-radius: 50%; }
+    .user-nav__user-name {
+      padding: 1rem;
+      font-weight: 600; }
 
 .container {
   max-width: 120rem;
