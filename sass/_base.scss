@@ -1,0 +1,21 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 10px    10/16px = 62.5%
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+    color: $grey-dark-2;
+    background-image: linear-gradient(to right bottom, $primary-light, $primary-dark);
+    background-size: cover;
+    background-repeat: no-repeat;
+}

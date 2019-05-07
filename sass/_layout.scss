@@ -1,15 +1,29 @@
-$color: green;
-body {
-    color:$color;
-    font-size:16;
-    background-color: green;
-    height: 100px;
+.container {
+    max-width: 120rem;
+    margin: 8rem auto;
+    background-color: $grey-light-2;
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.5);
+
+    min-height: 50rem;
+}
+
+.header{
+    height: 7rem;
+    background-color: #fff;
+    border-bottom: 1px solid $grey-light-2;
+}
+
+.content{
     display: flex;
-    background-clip: polygon();
-    background-image: linear-gradient(to right, #fff, #888);
-    display: grid;
-    font-family: 'Courier New', Courier, monospace;
-    column-gap: 2;
-    backface-visibility: visible;
-    padding: 0;
+
+}
+
+.sidebar {
+    background-color: $grey-dark-1;
+    flex: 0 0 18%;
+}
+
+.hotel-view {
+    flex: 1;
+    background-color: orangered;
 }
