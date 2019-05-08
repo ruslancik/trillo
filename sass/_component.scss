@@ -174,4 +174,116 @@
     color: $grey-light-4;    
 }
 
+// Gallery 
 
+.gallery {
+    display: flex;
+    overflow: hidden;
+    &__item {
+
+    }
+
+    &__photo {
+        display: block;
+        width: 100%;
+        transform: scale(1.05);
+        transition: transform 0.3s;
+        backface-visibility: hidden;        
+        &:hover {
+            transform: scale(1);
+        }
+    }
+}
+
+.overview {
+    background-color: #fff;
+    border-bottom: 1px solid $grey-light-2;
+    display: flex;
+    align-items: center;
+
+    & > *:not(:last-child) {
+        padding-right: 2rem;
+    }
+
+
+    &__heading {
+        text-transform: uppercase;
+        padding-left: 2rem;
+        font-weight: 200;
+    }
+
+    &__icon {
+        flex: 1;
+        font-size: 1.4rem;
+        color: $primary;
+        padding: 1rem 2rem;
+    }
+
+    &__location {
+        font-size: 1.4rem;
+        color: $primary;
+        backface-visibility: hidden;
+
+
+        & .btn-inline {
+            text-decoration: none;
+            border-bottom: 1px solid $primary;
+            padding-bottom: 0.3rem;
+            color: $primary;
+            background-color: transparent;
+            margin-left: 0.3rem;
+            
+            &:hover {
+                border-bottom: 1px solid $grey-dark-2;
+                color: $grey-dark-2;
+
+            }
+
+            &:focus {
+                animation: pulse 1s infinite;
+                outline: none;
+            }
+
+         }
+        
+    }
+
+
+    &__rating {
+        background-color: $primary;
+        color:$grey-light-1;
+        text-align: center;
+        align-self: stretch;
+        padding: 1rem 1rem;
+        text-transform: uppercase;
+
+        &-average{
+            font-size: 2rem;
+            font-weight: 100;
+        }
+
+        &-count {
+            font-size: 1rem;
+            font-weight: 100;
+        }
+    }
+}
+
+
+@keyframes pulse {
+
+    0% {
+        transform: scale(1);
+        box-shadow: none;
+    }
+
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: none;
+    }
+}
