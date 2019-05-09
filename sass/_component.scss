@@ -124,6 +124,8 @@
     &__item {
         list-style: none;
         position: relative;
+        text-transform: uppercase;
+        
         &:not(:last-child){
            // margin-bottom: .1rem;
         }
@@ -223,30 +225,10 @@
         font-size: 1.4rem;
         color: $primary;
         backface-visibility: hidden;
-
-
-        & .btn-inline {
-            text-decoration: none;
-            border-bottom: 1px solid $primary;
-            padding-bottom: 0.3rem;
-            color: $primary;
-            background-color: transparent;
-            margin-left: 0.3rem;
-            
-            &:hover {
-                border-bottom: 1px solid $grey-dark-2;
-                color: $grey-dark-2;
-
-            }
-
-            &:focus {
-                animation: pulse 1s infinite;
-                outline: none;
-            }
-
-         }
-        
+ 
     }
+
+
 
 
     &__rating {
@@ -269,6 +251,26 @@
     }
 }
 
+.btn-inline {
+    text-decoration: none;
+    border-bottom: 1px solid $primary;
+    padding-bottom: 0.3rem;
+    color: $primary;
+    background-color: transparent;
+    margin-left: 0.3rem;
+    
+    &:hover {
+        border-bottom: 1px solid $grey-dark-2;
+        color: $grey-dark-2;
+
+    }
+
+    &:focus {
+        animation: pulse 1s infinite;
+        outline: none;
+    }
+
+ }
 
 @keyframes pulse {
 
@@ -347,4 +349,70 @@
         border: 3px solid #fff;
     }
 
+}
+
+
+/////////////
+//Review user 
+
+.review {
+    background-color: #fff;
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.3);
+    padding: 3rem;
+    margin-bottom: 3.5rem;
+    position: relative;
+    overflow: hidden;
+   
+    &::before {
+        content: "\201C";
+        position: absolute;
+        top: -3rem;
+        left: -0.5rem;
+        color: $grey-light-3;
+        font-size: 18rem;
+        font-family: sans-serif;
+        z-index: 0;
+    }
+
+    &__text {
+        color: $grey-dark-1;
+        font-weight: 600;
+        position: relative;
+    }
+   
+    &__user {
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__photo {
+        height: 5rem;
+        width: 5rem;
+        border-radius: 50%;
+    }
+
+    &__user-box {
+        padding: 1rem;
+    }
+    
+    &__user-name {
+        font-weight: 600;
+        color: $grey-dark-1;
+    }
+
+    &__user-date {
+        font-size: 1rem;
+    }
+
+    &__user-rate {
+        color: $primary;
+        font-size: 3rem;
+        font-weight: 100;
+    }
+
+    &__user-button {
+        text-align: center;
+    }
 }

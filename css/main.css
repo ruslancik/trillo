@@ -11,7 +11,7 @@ html {
 
 body {
   font-family: 'Open Sans', sans-serif;
-  height: 100vh;
+  height: 100%;
   font-weight: 400;
   color: #777;
   background-image: linear-gradient(to right bottom, #FF3366, #BA265D);
@@ -105,7 +105,8 @@ body {
   margin: 3.5rem 0; }
   .side-nav__item {
     list-style: none;
-    position: relative; }
+    position: relative;
+    text-transform: uppercase; }
   .side-nav__item::before {
     content: "";
     background-color: #eb2f64;
@@ -169,19 +170,6 @@ body {
     font-size: 1.4rem;
     color: #eb2f64;
     backface-visibility: hidden; }
-    .overview__location .btn-inline {
-      text-decoration: none;
-      border-bottom: 1px solid #eb2f64;
-      padding-bottom: 0.3rem;
-      color: #eb2f64;
-      background-color: transparent;
-      margin-left: 0.3rem; }
-      .overview__location .btn-inline:hover {
-        border-bottom: 1px solid #777;
-        color: #777; }
-      .overview__location .btn-inline:focus {
-        animation: pulse 1s infinite;
-        outline: none; }
   .overview__rating {
     background-color: #eb2f64;
     color: #faf9f9;
@@ -195,6 +183,20 @@ body {
     .overview__rating-count {
       font-size: 1rem;
       font-weight: 100; }
+
+.btn-inline {
+  text-decoration: none;
+  border-bottom: 1px solid #eb2f64;
+  padding-bottom: 0.3rem;
+  color: #eb2f64;
+  background-color: transparent;
+  margin-left: 0.3rem; }
+  .btn-inline:hover {
+    border-bottom: 1px solid #777;
+    color: #777; }
+  .btn-inline:focus {
+    animation: pulse 1s infinite;
+    outline: none; }
 
 @keyframes pulse {
   0% {
@@ -243,12 +245,54 @@ body {
     .recommend__photo:not(:last-child) {
       margin-right: -1.3rem; }
 
+.review {
+  background-color: #fff;
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.3);
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+  position: relative;
+  overflow: hidden; }
+  .review::before {
+    content: "\201C";
+    position: absolute;
+    top: -3rem;
+    left: -0.5rem;
+    color: #f0eeee;
+    font-size: 18rem;
+    font-family: sans-serif;
+    z-index: 0; }
+  .review__text {
+    color: #333;
+    font-weight: 600;
+    position: relative; }
+  .review__user {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .review__photo {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%; }
+  .review__user-box {
+    padding: 1rem; }
+  .review__user-name {
+    font-weight: 600;
+    color: #333; }
+  .review__user-date {
+    font-size: 1rem; }
+  .review__user-rate {
+    color: #eb2f64;
+    font-size: 3rem;
+    font-weight: 100; }
+  .review__user-button {
+    text-align: center; }
+
 .container {
   max-width: 120rem;
   margin: 8rem auto;
   background-color: #f4f2f2;
-  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.5);
-  min-height: 50rem; }
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.5); }
 
 .header {
   font-size: 1.4rem;
@@ -287,6 +331,4 @@ body {
   padding: 2rem; }
 
 .user-review {
-  flex: 1;
-  background-color: #fff;
-  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2); }
+  flex: 1; }
