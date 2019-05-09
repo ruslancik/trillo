@@ -298,6 +298,58 @@ body {
     -webkit-box-shadow: none;
     box-shadow: none; } }
 
+.paragraph:not(:last-of-type) {
+  margin-bottom: 2rem; }
+
+.list {
+  list-style: none;
+  margin: 3rem 0;
+  padding: 3rem 0;
+  border-top: 1px solid #f4f2f2;
+  border-bottom: 1px solid #f4f2f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .list__item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    padding: 0.5rem 1rem; }
+    .list__item i {
+      color: #eb2f64; }
+
+.recommend {
+  font-size: 1.3rem;
+  color: #999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .recommend__count {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 60%;
+    flex: 0 0 60%; }
+  .recommend__friends {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1; }
+  .recommend__photo {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    border: 3px solid #fff; }
+    .recommend__photo:not(:last-child) {
+      margin-right: -1.3rem; }
+
 .container {
   max-width: 120rem;
   margin: 8rem auto;
@@ -353,7 +405,8 @@ body {
   display: flex;
   padding: 4.5rem;
   background-color: #faf9f9;
-  border-bottom: 1px solid #f4f2f2; }
+  border-bottom: 1px solid #f4f2f2;
+  font-size: 1.4rem; }
 
 .description {
   -webkit-box-flex: 0;
@@ -362,7 +415,8 @@ body {
   background-color: #fff;
   margin-right: 4.5rem;
   -webkit-box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1);
-  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1); }
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1);
+  padding: 2rem; }
 
 .user-review {
   -webkit-box-flex: 1;
