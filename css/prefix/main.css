@@ -416,15 +416,69 @@ body {
   background-image: -webkit-linear-gradient(left, #FF3366, #BA265D);
   background-image: -o-linear-gradient(left, #FF3366, #BA265D);
   background-image: linear-gradient(to right, #FF3366, #BA265D);
-  padding: 2rem 3.5rem;
   border-radius: 100px;
   color: #fff;
-  font-weight: 400;
+  font-weight: 100;
   outline: none;
   -webkit-box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.3);
   box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.3);
   border: none;
-  font-size: 1.4rem; }
+  font-size: 1.8rem;
+  position: relative;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+  .btn > * {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s; }
+  .btn__visible {
+    padding: 2rem 6.5rem; }
+  .btn__invisible {
+    padding: 2rem 0;
+    position: absolute;
+    left: 0;
+    top: -100%; }
+  .btn:hover {
+    background-image: -webkit-gradient(linear, right top, left top, from(#FF3366), to(#BA265D));
+    background-image: -webkit-linear-gradient(right, #FF3366, #BA265D);
+    background-image: -o-linear-gradient(right, #FF3366, #BA265D);
+    background-image: linear-gradient(to left, #FF3366, #BA265D); }
+  .btn:hover .btn__visible {
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    transform: translateY(100%); }
+  .btn:hover .btn__invisible {
+    top: 0; }
+  .btn:focus {
+    outline: none;
+    -webkit-animation: btnPulse 1s infinite;
+    animation: btnPulse 1s infinite; }
+
+@-webkit-keyframes btnPulse {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  50% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+@keyframes btnPulse {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  50% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
 
 .container {
   max-width: 120rem;
