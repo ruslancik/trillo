@@ -416,3 +416,38 @@
         text-align: center;
     }
 }
+
+////////////////
+/// CALL TO ACTION
+
+.cta {
+    padding: 3.5rem 0;
+    text-align: center;
+
+    &__book-now {
+        text-transform: uppercase;
+        margin-bottom: 2.5rem;
+        font-weight: 300;
+        font-size: 1.6rem;
+    }
+}
+
+.btn {
+    background-image: linear-gradient(to right, $primary-light, $primary-dark);
+    padding: 2rem 3.5rem;
+    border-radius: 100px;
+    color: #fff;
+    font-weight: 400;
+    outline: none;
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.3);
+    border: none;
+    font-size: 1.4rem;
+    
+    &__visible {
+
+    }
+
+    &__invisible {
+        
+    }
+}
