@@ -3,6 +3,8 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
+const cleanCSS = require('gulp-clean-css');
+
 const watch = require('gulp-watch');
 
 
@@ -38,13 +40,26 @@ gulp.task('prefix', () =>
         .pipe(gulp.dest('../css/prefix'))
     );
 
+
+
+    ///////////////////////
+    /// Minify css
+    //////////////////////
+    gulp.task('minify-css', () => {
+        return gulp.src('../css/prefix/*.css')
+          .pipe(cleanCSS({compatibility: 'ie8'}))
+          .pipe(gulp.dest('../css/minify'));
+      });
+
 // Watch
 
 gulp.task('watch', function(){
   gulp.watch('../sass/*.scss', gulp.series('sass'));
   gulp.watch('../css/*.css', gulp.series('prefix'));
+  gulp.watch('../css/*.css', gulp.series('minify-css'));
+
 });
 
 
 
-gulp.task('develop', gulp.series('sass', 'prefix', 'watch'));
+gulp.task('develop', gulp.series('sass', 'prefix', 'minify-css', 'watch'));
