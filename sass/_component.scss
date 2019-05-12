@@ -10,6 +10,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media only screen and (max-width:480px){
+        order:1;
+        flex: 0 0 100%;
+    }
     &__input {
         font-family: inherit;
         color:inherit;
@@ -171,8 +176,15 @@
         position: relative;
         z-index: 9;
 
+        display: flex;
+        align-items: center;
+
         @media only screen and (max-width:900px){
             text-align: center;
+            padding: 2rem;
+        }
+        @media only screen and (max-width:600px){
+            flex-direction: column;
             padding: 2rem;
         }
     }
@@ -180,6 +192,11 @@
    
     &__link-icon i {
         margin-right: 2rem;
+
+        @media only screen and (max-width:600px){
+             margin-right: 0;
+        }
+        
     }
 }
 
@@ -225,11 +242,21 @@
         padding-right: 2rem;
     }
 
+    
 
     &__heading {
         text-transform: uppercase;
         padding-left: 2rem;
         font-weight: 200;
+
+     
+
+        @media only screen and (max-width:600px){
+            padding: 1.5rem;
+        }
+
+   
+
     }
 
     &__icon {
@@ -237,6 +264,9 @@
         font-size: 1.4rem;
         color: $primary;
         padding: 1rem 2rem;
+        @media only screen and (max-width:600px){
+            padding: 0.8rem 1.5rem;
+        }
     }
 
     &__location {
