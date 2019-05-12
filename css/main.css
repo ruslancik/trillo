@@ -185,6 +185,9 @@ body {
   border-bottom: 1px solid #f4f2f2;
   display: flex;
   align-items: center; }
+  @media only screen and (max-width: 480px) {
+    .overview {
+      flex-wrap: wrap; } }
   .overview > *:not(:last-child) {
     padding-right: 2rem; }
   .overview__heading {
@@ -202,6 +205,12 @@ body {
     @media only screen and (max-width: 600px) {
       .overview__icon {
         padding: 0.8rem 1.5rem; } }
+    @media only screen and (max-width: 480px) {
+      .overview__icon {
+        order: 1;
+        flex: 0 0 auto;
+        padding: 0.5rem 1rem;
+        font-size: 2rem; } }
   .overview__location {
     font-size: 1.4rem;
     color: #eb2f64;
